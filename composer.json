@@ -4,7 +4,7 @@
     "type": "flarum-extension",
     "keywords": ["authentication"],
     "license": "MIT",
-    "version": "v0.1.0-beta.8",
+    "version": "v0.1.0-beta.8.1",
     "authors": [
         {
             "name": "John Hearfield",
