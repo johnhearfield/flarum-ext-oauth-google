@@ -38,7 +38,7 @@ System.register('johnhearfield/auth-google/components/GoogleSettingsModal', ['fl
                 null,
                 'Client ID'
               ),
-              m('input', { className: 'FormControl', bidi: this.setting('johnhearfield-auth-google.app_id') })
+              m('input', { className: 'FormControl', bidi: this.setting('johnhearfield-oauth-google.app_id') })
             ), m(
               'div',
               { className: 'Form-group' },
@@ -47,7 +47,7 @@ System.register('johnhearfield/auth-google/components/GoogleSettingsModal', ['fl
                 null,
                 'Client Secret'
               ),
-              m('input', { className: 'FormControl', bidi: this.setting('johnhearfield-auth-google.app_secret') })
+              m('input', { className: 'FormControl', bidi: this.setting('johnhearfield-oauth-google.app_secret') })
             ), m(
               'div',
               { className: 'Form-group' },
@@ -56,7 +56,7 @@ System.register('johnhearfield/auth-google/components/GoogleSettingsModal', ['fl
                 null,
                 'Hosted Domain'
               ),
-              m('input', { className: 'FormControl', bidi: this.setting('johnhearfield-auth-google.app_domain') })
+              m('input', { className: 'FormControl', bidi: this.setting('johnhearfield-oauth-google.app_domain') })
             )];
           }
         }]);
@@ -83,8 +83,8 @@ System.register('johnhearfield/auth-google/main', ['flarum/extend', 'flarum/app'
     }],
     execute: function () {
 
-      app.initializers.add('johnhearfield-auth-google', function (app) {
-        app.extensionSettings['johnhearfield-auth-google'] = function () {
+      app.initializers.add('johnhearfield/auth-google', function (app) {
+        app.extensionSettings['johnhearfield-oauth-google'] = function () {
           return app.modal.show(new GoogleSettingsModal());
         };
       });

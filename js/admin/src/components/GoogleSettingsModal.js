@@ -13,17 +13,17 @@ export default class GoogleSettingsModal extends SettingsModal {
     return [
       <div className="Form-group">
         <label>Client ID</label>
-        <input className="FormControl" bidi={this.setting('johnhearfield-auth-google.app_id')}/>
+        <input className="FormControl" bidi={this.setting('johnhearfield-oauth-google.app_id')}/>
       </div>,
 
       <div className="Form-group">
         <label>Client Secret</label>
-        <input className="FormControl" bidi={this.setting('johnhearfield-auth-google.app_secret')}/>
+        <input className="FormControl" bidi={this.setting('johnhearfield-oauth-google.app_secret')}/>
       </div>,
 
       <div className="Form-group">
         <label>Hosted Domain</label>
-        <input className="FormControl" bidi={this.setting('johnhearfield-auth-google.app_domain')}/>
+        <input className="FormControl" bidi={this.setting('johnhearfield-oauth-google.app_domain')}/>
       </div>
     ];
   }

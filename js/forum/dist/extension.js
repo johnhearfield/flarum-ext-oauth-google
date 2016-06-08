@@ -16,7 +16,7 @@ System.register('johnhearfield/auth-google/main', ['flarum/extend', 'flarum/app'
     }],
     execute: function () {
 
-      app.initializers.add('johnhearfield-auth-google', function () {
+      app.initializers.add('johnhearfield/auth-google', function () {
         extend(LogInButtons.prototype, 'items', function (items) {
           items.add('google', m(
             LogInButton,

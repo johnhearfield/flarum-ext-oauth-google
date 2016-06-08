@@ -31,11 +31,11 @@ class GoogleAuthController extends AbstractOAuth2Controller
     protected function getProvider($redirectUri)
     {
         return new Google([
-            'clientId'        => $this->settings->get('johnhearfield-auth-google.app_id'),
-            'clientSecret'    => $this->settings->get('johnhearfield-auth-google.app_secret'),
+            'clientId'        => $this->settings->get('johnhearfield-oauth-google.app_id'),
+            'clientSecret'    => $this->settings->get('johnhearfield-oauth-google.app_secret'),
             'redirectUri'     => $redirectUri,
             'approvalPrompt'  => 'force',
-            'hostedDomain'    => $this->settings->get('johnhearfield-auth-google.app_domain'),
+            'hostedDomain'    => $this->settings->get('johnhearfield-oauth-google.app_domain'),
             'accessType'      => 'offline'
         ]);
     }
