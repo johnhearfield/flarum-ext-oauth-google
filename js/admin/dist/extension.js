@@ -1,6 +1,6 @@
 'use strict';
 
-System.register('johnhearfield/auth/google/components/GoogleSettingsModal', ['flarum/components/SettingsModal'], function (_export, _context) {
+System.register('johnhearfield/auth-google/components/GoogleSettingsModal', ['flarum/components/SettingsModal'], function (_export, _context) {
   "use strict";
 
   var SettingsModal, GoogleSettingsModal;
@@ -69,7 +69,7 @@ System.register('johnhearfield/auth/google/components/GoogleSettingsModal', ['fl
 });;
 'use strict';
 
-System.register('johnhearfield/auth/google/main', ['flarum/app', 'johnhearfield/auth/google/components/GoogleSettingsModal'], function (_export, _context) {
+System.register('johnhearfield/auth-google/main', ['flarum/app', 'johnhearfield/auth/google/components/GoogleSettingsModal'], function (_export, _context) {
   "use strict";
 
   var app, GoogleSettingsModal;
