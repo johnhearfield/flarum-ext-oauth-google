@@ -69,19 +69,21 @@ System.register('johnhearfield/auth-google/components/GoogleSettingsModal', ['fl
 });;
 'use strict';
 
-System.register('johnhearfield/auth-google/main', ['flarum/app', 'johnhearfield/auth/google/components/GoogleSettingsModal'], function (_export, _context) {
+System.register('johnhearfield/auth-google/main', ['flarum/extend', 'flarum/app', 'johnhearfield/auth-google/components/GoogleSettingsModal'], function (_export, _context) {
   "use strict";
 
-  var app, GoogleSettingsModal;
+  var extend, app, GoogleSettingsModal;
   return {
-    setters: [function (_flarumApp) {
+    setters: [function (_flarumExtend) {
+      extend = _flarumExtend.extend;
+    }, function (_flarumApp) {
       app = _flarumApp.default;
     }, function (_johnhearfieldAuthGoogleComponentsGoogleSettingsModal) {
       GoogleSettingsModal = _johnhearfieldAuthGoogleComponentsGoogleSettingsModal.default;
     }],
     execute: function () {
 
-      app.initializers.add('johnhearfield-auth-google', function () {
+      app.initializers.add('johnhearfield-auth-google', function (app) {
         app.extensionSettings['johnhearfield-auth-google'] = function () {
           return app.modal.show(new GoogleSettingsModal());
         };
