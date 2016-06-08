@@ -10,7 +10,7 @@ app.initializers.add('johnhearfield/auth-google', () => {
         className="Button LogInButton--google"
         icon="google"
         path="/auth/google">
-        Login with Google
+        {app.translator.trans('johnhearfield-oauth-google.forum.log_in.with_google_button')}
       </LogInButton>
     );
   });

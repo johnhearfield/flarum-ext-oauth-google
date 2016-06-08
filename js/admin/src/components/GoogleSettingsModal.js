@@ -1,4 +1,5 @@
 import SettingsModal from 'flarum/components/SettingsModal';
+import app from 'flarum/app';
 
 export default class GoogleSettingsModal extends SettingsModal {
   className() {
@@ -6,23 +7,23 @@ export default class GoogleSettingsModal extends SettingsModal {
   }
 
   title() {
-    return "Google Settings";
+    return app.translator.trans('johnhearfield-oauth-google.admin.google_settings.title');
   }
 
   form() {
     return [
       <div className="Form-group">
-        <label>Client ID</label>
+        <label>{app.translator.trans('johnhearfield-oauth-google.admin.google_settings.client_id_label')}</label>
         <input className="FormControl" bidi={this.setting('johnhearfield-oauth-google.app_id')}/>
       </div>,
 
       <div className="Form-group">
-        <label>Client Secret</label>
+        <label>{app.translator.trans('johnhearfield-oauth-google.admin.google_settings.client_secret_label')}</label>
         <input className="FormControl" bidi={this.setting('johnhearfield-oauth-google.app_secret')}/>
       </div>,
 
       <div className="Form-group">
-        <label>Hosted Domain</label>
+        <label>{app.translator.trans('johnhearfield-oauth-google.admin.google_settings.hosted_domain_label')}</label>
         <input className="FormControl" bidi={this.setting('johnhearfield-oauth-google.app_domain')}/>
       </div>
     ];

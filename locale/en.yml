@@ -1,0 +1,12 @@
+johnhearfield-oauth-google:
+
+  admin:
+    google_settings:
+      title: "Google Settings"
+      client_id_label: "Client ID"
+      client_secret_label: "Client Secret"
+      hosted_domain_label: "Hosted Domain"
+
+  forum:
+    log_in:
+      with_google_button: "Login with Google"

@@ -24,7 +24,7 @@ System.register('johnhearfield/auth-google/main', ['flarum/extend', 'flarum/app'
               className: 'Button LogInButton--google',
               icon: 'google',
               path: '/auth/google' },
-            'Login with Google'
+            app.translator.trans('johnhearfield-oauth-google.forum.log_in.with_google_button')
           ));
         });
       });

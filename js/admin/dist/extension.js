@@ -1,12 +1,14 @@
 'use strict';
 
-System.register('johnhearfield/auth-google/components/GoogleSettingsModal', ['flarum/components/SettingsModal'], function (_export, _context) {
+System.register('johnhearfield/auth-google/components/GoogleSettingsModal', ['flarum/components/SettingsModal', 'flarum/app'], function (_export, _context) {
   "use strict";
 
-  var SettingsModal, GoogleSettingsModal;
+  var SettingsModal, app, GoogleSettingsModal;
   return {
     setters: [function (_flarumComponentsSettingsModal) {
       SettingsModal = _flarumComponentsSettingsModal.default;
+    }, function (_flarumApp) {
+      app = _flarumApp.default;
     }],
     execute: function () {
       GoogleSettingsModal = function (_SettingsModal) {
@@ -25,7 +27,7 @@ System.register('johnhearfield/auth-google/components/GoogleSettingsModal', ['fl
         }, {
           key: 'title',
           value: function title() {
-            return "Google Settings";
+            return app.translator.trans('johnhearfield-oauth-google.admin.google_settings.title');
           }
         }, {
           key: 'form',
@@ -36,7 +38,7 @@ System.register('johnhearfield/auth-google/components/GoogleSettingsModal', ['fl
               m(
                 'label',
                 null,
-                'Client ID'
+                app.translator.trans('johnhearfield-oauth-google.admin.google_settings.client_id_label')
               ),
               m('input', { className: 'FormControl', bidi: this.setting('johnhearfield-oauth-google.app_id') })
             ), m(
@@ -45,7 +47,7 @@ System.register('johnhearfield/auth-google/components/GoogleSettingsModal', ['fl
               m(
                 'label',
                 null,
-                'Client Secret'
+                app.translator.trans('johnhearfield-oauth-google.admin.google_settings.client_secret_label')
               ),
               m('input', { className: 'FormControl', bidi: this.setting('johnhearfield-oauth-google.app_secret') })
             ), m(
@@ -54,7 +56,7 @@ System.register('johnhearfield/auth-google/components/GoogleSettingsModal', ['fl
               m(
                 'label',
                 null,
-                'Hosted Domain'
+                app.translator.trans('johnhearfield-oauth-google.admin.google_settings.hosted_domain_label')
               ),
               m('input', { className: 'FormControl', bidi: this.setting('johnhearfield-oauth-google.app_domain') })
             )];
