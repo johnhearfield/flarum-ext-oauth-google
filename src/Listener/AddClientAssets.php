@@ -2,7 +2,9 @@
 
 namespace JohnHearfield\Auth\Google\Listener;
 
+use DirectoryIterator;
 use Flarum\Event\ConfigureClientView;
+use Flarum\Event\ConfigureLocales;
 use Illuminate\Contracts\Events\Dispatcher;
 
 class AddClientAssets
