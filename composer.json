@@ -3,7 +3,7 @@
     "description": "Allow users to log in with Google.",
     "type": "flarum-extension",
     "keywords": ["authentication"],
-    "license": "MIT",
+    "license": "GPL-3.0+",
     "version": "v0.1.0-beta.8.1",
     "authors": [
         {
