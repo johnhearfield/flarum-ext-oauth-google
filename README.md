@@ -11,27 +11,19 @@ composer require johnhearfield/flarum-ext-oauth-google
 * Enable extension in the admin/extensions of Flarum
 * Fill in the settings field for the extension
 
-----------
+
 ## Setup instructions ##
 ----------
-Before you can integrate Google Sign-In into your website, you must have a Google API Console project. In the project, you create a client ID, which you need to call the sign-in API.
+1. Go to the Google API Console: https://console.developers.google.com/project/_/apiui/apis/library
+2. Create a new project in the dropdown at the top and give it a name (eg My Flarum)
+3. Once on the project dashboard, search for **Google+** and enable the API
+5. In the sidebar under "API Manager", select **Credentials**, then select the **OAuth consent screen** tab.
+6. Choose an Email Address, specify a Product Name, and press Save.
+7. In the Credentials tab, select the New credentials drop-down list, and choose **OAuth client ID**.
+8. Select **Web Application**
+9. The **Authorized Javascript origin** will be your domain: **http://flarum.example.com**
+10. The **Authorised redirect URIs** will be **http://flarum.example.com/auth/google** (notice it ends in */auth/google*
+11. From the resulting OAuth client dialog box, you will be able to access the **Client ID** and the **Client Secret** will you will need to paste into the settings box on the Flarum extension
 
-Follow the steps described here: https://developers.google.com/identity/sign-in/web/devconsole-project
-
-****
-Once you have completed the above steps, you will need to enable the Google+ API to pull the user data required to create a user on Flarum
-
-1. Go to the Google API Dashboard : https://console.developers.google.com/apis/dashboard
-2. Select your existing project to go to the project's dashboard
-3. Click on **Enable API+** on the top and search for **Google+ API** and click on 'Enable'
-
-You should now be able to login using Google. 
-
-****
-**Optional** *Hosted domain*
-
-The *hd* paramater limits sign-in to a particular Google Apps hosted domain.
-
-https://developers.google.com/identity/protocols/OpenIDConnect#authenticationuriparameters
-
-Leave the Hosted Parameter blank if you want any Google-enabled email to login, unless you want to whitelist only your @googleapp.domain email addresses (for things like a company Flarum board)
+**Notice**
+The *Hosted Domain* paramater is for only allowing emails in your Google Apps account access, otherwise you should leave it blank
