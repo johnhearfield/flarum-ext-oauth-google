@@ -12,7 +12,7 @@ composer require johnhearfield/flarum-ext-oauth-google
 * Fill in the settings field for the extension
 
 
-## Setup instructions ##
+## Setup instructions for Google ##
 ----------
 1. Go to the Google API Console: https://console.developers.google.com/project/_/apiui/apis/library
 2. Create a new project in the dropdown at the top and give it a name (eg My Flarum)
