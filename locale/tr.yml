@@ -1,0 +1,12 @@
+johnhearfield-oauth-google:
+
+  admin:
+    google_settings:
+      title: "Google Ayarları"
+      client_id_label: "Client ID'si"
+      client_secret_label: "Client Gizli Anahtarı"
+      hosted_domain_label: "Barındırılan Alan Adı"
+
+  forum:
+    log_in:
+      with_google_button: "Google ile Giriş Yap"
