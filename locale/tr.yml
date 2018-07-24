@@ -9,4 +9,4 @@ johnhearfield-oauth-google:
 
   forum:
     log_in:
-with_google_button: "Google ile Giriş Yap"
+      with_google_button: "Google ile Giriş Yap"
