@@ -1,4 +1,7 @@
 # Flarum Google Authenticator
+![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 Allows users to login using their Google Account.
 
 ## Installation
